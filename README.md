@@ -3,23 +3,30 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+ruby version : 2.3.1
 
-* Ruby version
+rails : 5.2.0
 
-* System dependencies
+http://localhost:3000/admin
 
-* Configuration
+used for admin panel
+email: admin@example.com
+password: password
 
-* Database creation
+1. Admin part only used to craete autors and books and has many throuth association used to implement this feature.
 
-* Database initialization
+I don't hadle while craete book if author not present its save book in database. If need, I will do this.
 
-* How to run the test suite
+API end point to fetch the data, in Api did not implement any authentication, its used as a public API.
 
-* Services (job queues, cache servers, search engines, etc.)
+Author with books: 
 
-* Deployment instructions
+curl http://localhost:3000/authors/1 for single author
 
-* ...
-# library
+curl http://localhost:3000/authors for all author
+
+Book with authors: 
+
+curl http://localhost:3000/books/1 for single book
+
+curl http://localhost:3000/books for all book
